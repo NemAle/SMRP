@@ -5,7 +5,7 @@ from .base_meta import Base
 class Client(Base):
     __tablename__ = "Client"
 
-    id_client = Column(Integer, primary_key=True)
+    id_client = Column(Integer, primary_key=True, autoincrement=True)
     full_name_cl = Column(String(250), nullable=False)
     telephone = Column(String(15), nullable=False)
 

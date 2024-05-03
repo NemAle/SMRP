@@ -6,9 +6,8 @@ from .base_meta import Base
 class Zayavki(Base):
     __tablename__ = "Zayavki"
 
-    id_zayavki = Column(Integer, primary_key=True, nullable=False)
+    id_zayavki = Column(Integer, primary_key=True, nullable=False, autoincrement=True)
     data = Column(String(20), nullable=False)
-    cena = Column(Integer, nullable=True)
     id_client = Column(Integer, ForeignKey("Client.id_client"), nullable=True)
 
     client = relationship("Client", back_populates="zayavk")

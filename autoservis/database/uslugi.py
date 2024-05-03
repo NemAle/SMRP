@@ -7,6 +7,7 @@ class Uslugi(Base):
 
     id_uslugi = Column(Integer, primary_key=True, nullable=False)
     remont = Column(String(50), nullable=False)
+    cena = Column(Integer, nullable=True)
 
 
     usluga_rabs = relationship("Rabotnik", back_populates="usluga")
